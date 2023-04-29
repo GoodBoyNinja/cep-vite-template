@@ -13,7 +13,6 @@ Better use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) if you are:
 1. Already comfortable with **web development** and want to get started with CEP quickly.
 2. Already using frameworks like React, Vue or Svelte and want to use them in your extension.
 
-If you are already comfortable with webdev and looking for a more complete solution use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) which is probably better in every way.
 
 <br/>
 <br/>
