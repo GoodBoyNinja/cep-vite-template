@@ -70,10 +70,11 @@ Once the build is complete, you will find your `.zxp` file in `/dist/%TOOLNAME%.
 When you are ready to share this latest build, move your `zxp` file to `/zxp/release/VERSION`, or anywhere else you want to keep it safe.
 
 ## Testing your build
-1. Through the ZXP installer, find any previous versions of your tool and click `Uninstall`.
-2. Install your latest build.
 
-⚠️ Don't skip uninstalling! ZXP installer may try to override our symlinked folder, and by doing that, delete our actual working files.
+1. Run `node symlink --unlink` to remove the symlinked folder.
+2.  install your `.zxp` using the ZXP installer, or [manually](https://motionbro.net/help/extension-troubleshooting/how-to-install-an-extension-for-adobe-without-creative-cloud-app/#manual-installation).
+
+⚠️ Don't skip unlinking! ZXP installer may try to override our symlinked folder, and by doing that, delete our actual working files. 
 
 
 
