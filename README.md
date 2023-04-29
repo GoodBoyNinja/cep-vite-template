@@ -13,7 +13,6 @@ Better use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) if you are:
 1. Already comfortable with **web development** and want to get started with CEP quickly.
 2. Already using frameworks like React, Vue or Svelte and want to use them in your extension.
 
-If you are already comfortable with webdev and looking for a more complete solution use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) which is probably better in every way.
 
 <br/>
 <br/>
@@ -99,7 +98,7 @@ Unlike scripts, extensions can grow big quite easily. Please use git and github 
 ELI5: this is the F12 equivalent for your extension.
 
 ELI15: Adobe provides a way to debug your extension **while it's running**.
-What it means is that you can open a Chrome DevTools window and see the console logs of your extension, as well as inspect the DOM and use the debugger. In simpler words, 
+What it means is that you can open a Chrome DevTools window and see the console logs of your extension, as well as inspect the DOM and use the debugger.
 
 To do that, follow these steps:
 1. Open your extension, make sure it's running.
@@ -158,7 +157,7 @@ If you are coming from scripting, know:
 * The main TS file is `/src/index.ts`. This is where you start writing your code.
 * Use `/public` to store [static files](https://vitejs.dev/guide/assets.html) that you want to be copied to the build folder.
 * Inside `/src` you can use any folder structure you want. It's important that you don't move the `/CSXS` folder.
-* The `/dist` folder is where your extension gets built. Don't touch it.
+* The `/dist` folder is where your extension gets built. 
 * The `node_modules` folder is where all your dependencies get installed. In a healthy project, this folder can always be deleted and recreated by running `npm install`. 
 
 Not required, but recommended:
