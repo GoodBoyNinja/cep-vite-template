@@ -1,0 +1,19 @@
+ {  
+  "compilerOptions": {
+    "lib": ["es2015", "dom"],
+    "outDir": "./built",
+    "allowJs": true,
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types/globals.ts",
+    "./types/modules.ts"
+    ]
+  },
+  "include": [
+    "./src/**/*",
+    "./types/globals.ts",
+    "./types/modules.ts"
+  ]
+}
+ 
