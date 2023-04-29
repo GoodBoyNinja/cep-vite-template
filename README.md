@@ -97,7 +97,7 @@ Unlike scripts, extensions can grow big quite easily. Please use git and github 
 ELI5: this is the F12 equivalent for your extension.
 
 ELI15: Adobe provides a way to debug your extension **while it's running**.
-What it means is that you can open a Chrome DevTools window and see the console logs of your extension, as well as inspect the DOM and use the debugger. In simpler words, 
+What it means is that you can open a Chrome DevTools window and see the console logs of your extension, as well as inspect the DOM and use the debugger.
 
 To do that, follow these steps:
 1. Open your extension, make sure it's running.
