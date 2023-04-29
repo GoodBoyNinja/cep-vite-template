@@ -16,12 +16,17 @@
     "dotenv": "^16.0.3",
     "rollup": "^3.18.0",
     "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-import-extendscript": "^1.0.2",
+    "rollup-plugin-bundle-cep-manifest": "^1.0.1",
+    "rollup-plugin-import-extendscript": "^1.0.4",
+    "rollup-plugin-zxp": "^1.1.0",
     "stateshot": "^1.3.4",
     "treeify": "^1.1.0",
     "ts-migrate": "^0.1.35",
     "vite": "^4.1.0",
-    "vite-plugin-inspect": "^0.7.16"
+    "vite-plugin-inspect": "^0.7.16",
+    "vite-plugin-node-polyfills": "^0.7.0",
+    "vite-plugin-singlefile": "^0.13.5",
+    "rollup-plugin-license": "^3.0.1"
   },
   "nodemonConfig": {
     "ext": "js,html, jsx, css, scss, json, md, xml"
@@ -34,11 +39,6 @@
     "object-assign-deep": "^0.4.0",
     "os-paths": "^7.3.0",
     "prompt-sync": "^4.2.0",
-    "query-selector-shadow-dom": "^1.0.1",
-    "rollup-plugin-bundle-cep-manifest": "^1.0.0",
-    "rollup-plugin-license": "^3.0.1",
-    "rollup-plugin-zxp": "^1.0.0",
-    "vite-plugin-node-polyfills": "^0.7.0",
-    "vite-plugin-singlefile": "^0.13.5"
+    "query-selector-shadow-dom": "^1.0.1"
   }
 }
