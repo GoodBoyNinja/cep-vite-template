@@ -183,6 +183,15 @@ This template uses my plugin [rollup-plugin-bundle-cep-manifest
 
 Notice that if you want to use your own naming convention for your html files, the plugin might not be able to resolve the correct file. In that case, head over to the [plugin's readme](https://www.npmjs.com/package/rollup-plugin-bundle-cep-manifest#automatic) to learn how to configure it manually.
 
+## Symlink
+We use symlink to mirror our project folder inside the Adobe app's extensions folder. This way we can develop our extension wherever we want, while the Adobe app can still access it.
+This template uses a custom node script in the root, `/symlink.js`.
+The available commands are:
+* `node symlink` - Creates the symlink.
+* `node symlink --open` - Creates the symlink and opens the new folder in Finder/Explorer.
+* `node symlink --unlink` - Removes the symlink.
+
+
 <br/>
 <br/>
 <br/>
