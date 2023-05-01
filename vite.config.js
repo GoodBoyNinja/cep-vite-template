@@ -51,7 +51,7 @@ export default defineConfig({
                     },
                     sign: {
                         password: process.env.CERT_PASSWORD,
-                        output: `/dist/Playground.zxp`
+                        output: `dist/Playground.zxp`
                     },
                     gitIgnore: [`.env`, `*.p12`],
                 }),
