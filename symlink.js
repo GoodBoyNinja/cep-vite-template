@@ -1,10 +1,7 @@
-
-
 import * as fs from 'fs';
 import * as path from 'path';
 import * as os from 'os';
 import * as child_process from 'child_process';
-import prompt from 'prompt-sync';
 
 const messages = {
     winSymlinkDevError: `--------------------------\nGOOD BOY NINJA SAYS:\nTo successfully create a symlink on windows, make sure you are running VSCode as admin (right click on the icon and select "Run as administrator") or turn on developer mode in windows settings, then try again.\n--------------------------`
@@ -15,6 +12,7 @@ const isMacOS = os.platform() === 'darwin';
 
 let args = process.argv.slice(2);
 let unlink = args.includes('--unlink') || args.includes('unlink');
+let dist = args.includes('--dist') || args.includes('dist');
 let open = args.includes('--open') || args.includes('open');
 let override = args.includes('--override') || args.includes('override');
 
@@ -22,9 +20,11 @@ let override = args.includes('--override') || args.includes('override');
 let __dirname = path.resolve();
 const PROJECT_NAME = path.basename(path.join(__dirname, './'));
 const CEP_FOLDER = isMacOS ? path.join(os.homedir(), 'Library/Application Support/Adobe/CEP/extensions') : path.join(os.homedir(), 'AppData/Roaming/Adobe/CEP/extensions');
-const EXTENSION_FOLDER = __dirname;
+const EXTENSION_FOLDER = dist ? path.join(__dirname, "dist") : __dirname;
 const EXTENSION_NAME = `com.${PROJECT_NAME.toLowerCase()}.extension`;
 const EXTENSION_SYMLINK = path.join(CEP_FOLDER, EXTENSION_NAME);
+
+const extensionFolderPrintedName = dist ? `dist folder` : `extension folder`;
 
 
 
@@ -51,10 +51,7 @@ function symlink_link() {
     // create the symlink
     try {
         fs.symlinkSync(EXTENSION_FOLDER, EXTENSION_SYMLINK);
-        console.log(`
-        \n---- Attempting to create symlink ----\n
-    `);
-        console.log(`Symlink created successfully!  A live copy of your extension is now available in the CEP extensions folder over at: "${EXTENSION_SYMLINK}"\nDon't forget to restart your Adobe app!\n`);
+        console.log(`Symlink created successfully!\nA live copy of your ${extensionFolderPrintedName} is now available in the CEP extensions folder over at:\n --> "${EXTENSION_SYMLINK}"\nDon't forget to restart your Adobe app!`);
 
     } catch (e) {
         console.log(messages.winSymlinkDevError);
@@ -73,7 +70,7 @@ function symlink_validate() {
     }
 
     if (fs.existsSync(EXTENSION_SYMLINK)) {
-        console.log(`\nERROR:\nA symlink already exists at "${EXTENSION_SYMLINK}"\n If you are sure you want to override this folder, please run: "node symlink --override"`);
+        console.log(`\nERROR:\nA symlink already exists at "${EXTENSION_SYMLINK}"\n If you are sure you want to override this folder, add "--override" to your command`);
         return false;
     }
 

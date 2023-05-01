@@ -2,16 +2,19 @@
 	display: none;
 }
 
-:root {
-	/* --mellowYellow: rgb(241, 218, 4);
-	--beanGreen: rgb(37, 37, 37);
-	--madRed: rgb(255, 0, 0);
-	--jackBlack: rgb(0, 0, 0); */
-	/* --defaultBorder: 3px solid var(--jackBlack);
-	--defaultBorderRadius: 6px;
-	--mysteryColor: rgba(0, 0, 0, 0.164);
-	--slidersPaddingMult: 1;
-	--textSizeMult: 0.65;
-	--btnImgSizeMult: 1;
-	--primeBtnPaddingMult: 1; */
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: pink;
+}
+
+.happy {
+	position: relative;
+	width: 100px;
+	aspect-ratio: 1/1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }

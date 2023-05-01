@@ -1,6 +1,6 @@
 declare module "*.svg" {
-    const content: SVGElement | string;
-    export default content;
+    const path: string;
+    export default path;
 }
 
 declare module "*.png" {

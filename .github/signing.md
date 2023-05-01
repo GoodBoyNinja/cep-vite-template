@@ -1,0 +1,2 @@
+## Signing
+Typically signing your extension is a manual process that involves a lot of steps. This template uses my plugin [rollup-plugin-zxp](https://www.npmjs.com/package/rollup-plugin-zxp) to automate this process. It hides a lot of the complexity behind the process. Read more about it in the plugin's readme if you need more control over the signing process.

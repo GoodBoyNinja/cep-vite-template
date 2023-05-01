@@ -7,19 +7,18 @@ import Inspect from 'vite-plugin-inspect';
 import license from 'rollup-plugin-license';
 import copy from 'rollup-plugin-copy';
 import * as dotenv from 'dotenv';
-import { viteSingleFile } from "vite-plugin-singlefile";
-
 dotenv.config();
 
+
 export default defineConfig({
-    base: './',
+    base: '',
+    target: 'modules',
     plugins: [
         nodePolyfills({ protocolImports: true }),
         importExtendScript({
             explicit: true
         }),
-        viteSingleFile(),
-        // Inspect({}),
+        htmlTransformerPlugin(),
     ],
 
     build: {
@@ -52,13 +51,17 @@ export default defineConfig({
                     },
                     sign: {
                         password: process.env.CERT_PASSWORD,
-                        output: `/dist/%TOOLNAME%.zxp`
+                        output: `/dist/Playground.zxp`
                     },
                     gitIgnore: [`.env`, `*.p12`],
-                })
+                }),
+
+
+
             ],
             external: ['cep_node'],
             output: {
+                dir: 'dist',
                 format: 'cjs',
                 preserveModules: false,
             }
@@ -69,3 +72,18 @@ export default defineConfig({
 });
 
 
+
+
+
+function htmlTransformerPlugin() {
+    return {
+        name: 'html-transformer-plugin',
+        transformIndexHtml: (html) => {
+            if (process.env.NODE_ENV !== 'production') {
+                return;
+            }
+            return html.replace('type="module"', 'type="text/javascript" defer');
+
+        },
+    };
+}
