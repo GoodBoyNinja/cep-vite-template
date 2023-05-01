@@ -75,7 +75,7 @@ If you've done everything correctly, you should now be able to open a terminal i
 
 ⚠️The contents of the `/dist` folder are rewritten every time you run `npm run build`.
 
-If you are releasing your `.zxp` file to the public (are just want to keep it safe) you should move it somewhere else, such as `/zxp/public/%VERSION%` (note: this folder isn't ignored by git).
+If you are releasing your `.zxp` file to the public (are just want to keep it safe) you should move it somewhere else, such as `/zxp/%VERSION%` (note: this folder is **not** ignored by git).
 
 <br>
 
