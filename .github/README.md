@@ -18,8 +18,7 @@ Also you might ask yourself: [Why do I need a template?](/.github/why.md)
 
 ## Setup your new extension (Only once)
 
-Then:
-1. Clone this repo to your local machine and open the folder in VSCode.
+1. [Clone this repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) to your local machine and open the folder in VSCode.
 2. Open a terminal and run `npm install` to install all dependencies.
 3. From the same terminal, run `node symlink` to symlink the extension folder to your CEP extensions folder.
 4. Search & Replace all instances of:
@@ -54,7 +53,7 @@ This will create a `.zxp` file in `/dist/%TOOLNAME%.zxp`.
 
 
 
-However, creating a `.zxp` file involves a process called code signing. For this to work, you need to fill in some details first:
+However, creating a `.zxp` file involves a process called [code signing](https://en.wikipedia.org/wiki/Code_signing). For this to work, you need to fill in some details first:
 
 1. If you haven't already, create a `.env` file in the root of your project and add the following lines:
 ```
@@ -72,9 +71,16 @@ CERT_EMAIL=YOUREMAIL
 If you've done everything correctly, you should now be able to open a terminal in VSCode and run `npm run build` to build your extension.
 
 
+## Choosing a safe place for your builds
 
-⚠️This file gets overwritten every time you run `npm run build`.
-When you are ready to share this latest build, move your `zxp` file to `/zxp/release/VERSION`, or anywhere else you want to keep it safe.
+⚠️The contents of the `/dist` folder are rewritten every time you run `npm run build`. If you are releasing your `.zxp` file to the public (are just want to keep it safe) you should move it somewhere else.
+
+This template comes with two places you can use to store your builds:
+
+- `/zxp/public/%VERSION%` - Good for keeping public releases (this folder syncs with git)
+- `/zxp/private/%VERSION%` - Good for keeping private releases (this folder is ignored by git)
+
+You don't have to use any of these, they are there for convenience.
 
 <br>
 
@@ -115,8 +121,7 @@ Unlike scripts, extensions can grow big quite easily. Please use git and github 
 
 
 # Development tips
-This template is designed to simplify the development process.
-Here are some tips to help you get started:
+Learn how to use this template to its full potential:
 
 - [Using TypeScript and ES Modules](/.github/technologies.md)
 - [Including entire JSX (ExtendScript) files](/.github/extendscript.md)
@@ -134,12 +139,16 @@ You may also be wondering about:
 
 
 
-
-
-# The Future?
-`CSInterface` and `manifest.xml` are files provided by Adobe. Future versions of CEP may deprecate them in the future.
-
-
+<br/>
+<br/>
+<br/>
 
 # Not sure where to start?
 If you are new to CEP, I wrote a little [opinionated guide](https://github.com/GoodBoyNinja/Your-First-CEP-Panel) on what to learn first.
+
+<br/>
+<br/>
+<br/>
+
+---
+* `CSInterface` and `manifest.xml` are files provided by Adobe. Future versions of CEP may deprecate them in the future.

@@ -8,6 +8,8 @@ node_modules/
 .env
 *.p12
 
+zxp/private
+zxp/private/
 
 # Logs
 logs
