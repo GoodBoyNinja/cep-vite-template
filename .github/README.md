@@ -73,14 +73,9 @@ If you've done everything correctly, you should now be able to open a terminal i
 
 ## Choosing a safe place for your builds
 
-⚠️The contents of the `/dist` folder are rewritten every time you run `npm run build`. If you are releasing your `.zxp` file to the public (are just want to keep it safe) you should move it somewhere else.
+⚠️The contents of the `/dist` folder are rewritten every time you run `npm run build`.
 
-This template comes with two places you can use to store your builds:
-
-- `/zxp/public/%VERSION%` - Good for keeping public releases (this folder syncs with git)
-- `/zxp/private/%VERSION%` - Good for keeping private releases (this folder is ignored by git)
-
-You don't have to use any of these, they are there for convenience.
+If you are releasing your `.zxp` file to the public (are just want to keep it safe) you should move it somewhere else, such as `/zxp/public/%VERSION%` (note: this folder isn't ignored by git).
 
 <br>
 
@@ -129,6 +124,7 @@ Learn how to use this template to its full potential:
 - [Debugging](/.github/debugging.md) (Using the console and the debugger while developing)
 - [Folder Structure](/.github/structure.md)
 - [All available symlink options (and what the hell is a symlink anyway?)](/.github/symlink.md)
+- [Exclude irrelevant files from VSCode search](/.github/vscode.md)
 
 You may also be wondering about:
 - [What's the deal with index-dev.html and index.html?](/.github/indexdev.md)
