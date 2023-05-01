@@ -2,7 +2,6 @@
 .env/
 .secret
 .secret/
-zxp
 .DS_Store
 node_modules/
 .env
