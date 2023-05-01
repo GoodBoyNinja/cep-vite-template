@@ -1,4 +1,7 @@
 # 🌼  CEP-Vite-Template
+
+![Example of an empty CEP panel](./hero.png)
+
 ### A lo-fi starting point for your extension
 Better use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) if you are:
 1. Already comfortable with **web development** and want to get started with CEP quickly.
