@@ -23,12 +23,13 @@ Also you might ask yourself: [Why do I need a template?](/.github/why.md)
 
 1. [Clone this repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop) to your local machine and open the folder in VSCode.
 2. Open a terminal and run `npm install` to install all dependencies.
-3. From the same terminal, run `node symlink` to symlink the extension folder to your CEP extensions folder.
-4. Search & Replace all instances of:
+3. Search & Replace all instances of:
     - `com.developername.toolname.panel` with your extension ID (For example: `com.goodboyninja.skew.panel`)
     - `%TOOLNAME%` with your extension name (For example: `Skew`)
 
-5. in `/CSXS/manifest.xml` you will find a commented list of apps that your extension supports. Uncomment the ones you want to support (By default we support After-Effects 22.0 and later).
+4. in `/CSXS/manifest.xml` you will find a commented list of apps that your extension supports. Uncomment the ones you want to support (By default we support After-Effects 22.0 and later).
+5. From the same terminal, run `npm run symlink` and choose `Symlink "%TOOLNAME%" (start developing)`.
+
 6. Restart your Adobe app so it can find the symlinked extension for the first time.
 
 Now that everything is set up, follow the steps below to start developing your extension.
@@ -83,18 +84,17 @@ If you are releasing your `.zxp` file to the public (are just want to keep it sa
 <br>
 
 ## Testing your build
-1. Run `node symlink --dist --override`. This will remove our previous symlink and create a new one, but this time using the **dist** folder.
+1. Run `npm run symlink` and choose `Symlink "dist" (test your build)`.
 2. Restart your Adobe app and open your extension. If everything went well, you should see your extension running with the latest build.
 
-When you want to go back to development mode, run `node symlink --override` to override the symlink with the root folder, and restart your Adobe app.
+When you want to go back to development mode, run `npm run symlink` and choose `Symlink "%TOOLNAME%" (start developing)`.
 
 
 ## Testing your ZXP file
 Generally speaking, there shouldn't be any difference between the symlinked version and the ZXP version. However, before releasing your extension, it's a good idea to test your ZXP file to make sure it works as expected.
 
-1. Run `node symlink --unlink` to remove our symlink.
+1. Run `npm run symlink` and choose `Remove Symlink` (⚠️ IMPORTANT!)
 2. install your `.zxp` using the ZXP installer, or [manually](https://motionbro.net/help/extension-troubleshooting/how-to-install-an-extension-for-adobe-without-creative-cloud-app/#manual-installation).
-
 
 
 ⚠️ Don't skip unlinking! ZXP installer may try to override our symlinked folder, and by doing that, delete our actual working files. 

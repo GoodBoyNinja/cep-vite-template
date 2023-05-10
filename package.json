@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "symlink": "node node_modules/cep-symlink/dist/cep-symlink.es.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +24,8 @@
     "vite-plugin-inspect": "^0.7.16",
     "vite-plugin-node-polyfills": "^0.7.0",
     "vite-plugin-singlefile": "^0.13.5",
-    "rollup-plugin-license": "^3.0.1"
+    "rollup-plugin-license": "^3.0.1",
+    "cep-symlink": "^1.0.1"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"
