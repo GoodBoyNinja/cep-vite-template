@@ -3,6 +3,19 @@
 ![Example of an empty CEP panel](./hero.png)
 
 ### A lo-fi starting point for your extension
+Using:
+- [Vite](https://vitejs.dev/) for hot reloading and bundling.
+- [TypeScript](https://www.typescriptlang.org/) for type safety (loosely enforced by default so you can use JavaScript if you want).
+- Custom plugins to make working with CEP easier.
+- - [CEP-Symlink](/.github/symlink.md) to work outside of the Adobe extensions folder
+- - [rollup-plugin-import-extendscript](/.github/extendscript.md) to import ExtendScript files into your project.
+- - [rollup-plugin-zxp](/.github/signing.md) to sign your extension and create a `.zxp` file.
+- - [rollup-plugin-bundle-cep-manifest](/.github/indexdev.md) to automatically bundle our CSXS folder.
+
+*Optional: There is also a Svelte branch*
+
+---
+### Alternatives:
 Better use [BOLT-CEP](https://github.com/hyperbrew/bolt-cep) if you are:
 1. Already comfortable with **web development** and want to get started with CEP quickly.
 2. Already using frameworks like React, Vue or Svelte and want to use them in your extension.
