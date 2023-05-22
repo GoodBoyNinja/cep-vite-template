@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { bundleManifest } from 'rollup-plugin-bundle-cep-manifest';
 import importExtendScript from 'rollup-plugin-import-extendscript';
@@ -14,6 +15,7 @@ export default defineConfig({
     base: '',
     target: 'modules',
     plugins: [
+        svelte(),
         nodePolyfills({ protocolImports: true }),
         importExtendScript({
             explicit: true
