@@ -18,7 +18,7 @@
     "rollup": "^3.18.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-bundle-cep-manifest": "^1.0.1",
-    "rollup-plugin-import-extendscript": "^1.0.4",
+    "rollup-plugin-import-extendscript": "^1.0.5",
     "rollup-plugin-zxp": "^1.1.0",
     "vite": "^4.1.0",
     "vite-plugin-inspect": "^0.7.16",
